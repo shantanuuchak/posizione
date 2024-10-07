@@ -21,6 +21,7 @@ app.get("/current", async (c) => {
     regionCode: data!.regionCode,
     timezone: data!.timezone,
     airport_code: data!.colo,
+    asn: data!.asn,
   };
   return c.json(locationData);
 });
