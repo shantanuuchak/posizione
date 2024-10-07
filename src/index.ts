@@ -22,11 +22,7 @@ app.get("/current", async (c) => {
     timezone: data!.timezone,
     airport_code: data!.colo,
     asn: data!.asn,
-    botDetect: {
-      corporate: data.botManagement!.corporateProxy,
-      verifiedBot: data.botManagement!.verifiedBot,
-      score: data?.botManagement!.score,
-    },
+    botDetect: data!.botManagement,
   };
   return c.json(locationData);
 });
